@@ -4,14 +4,12 @@ Statisitical analysis for Kappa models. Currently, it carries out the following 
 2. Output the causal core that contributes most to the existence of the influence between the given Kappa rules.
 
 # Compile 
-----------------
 mkdir build
 cd build
 cmake -DCMAKE_CXX_COMPILER=clang-omp++ ../src
 make
 
 # Usage
-----------------
 The command line is as follows:
         KaStat_sq <testfile> <modelfile> <ruleAname> <ruleBname> <influType> <KaSim> <simulationTime> <KaFlow>
         
