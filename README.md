@@ -8,10 +8,11 @@ Statisitical analysis for Kappa models. Currently, it carries out the following 
 
 # Compile 
 
-mkdir build
-cd build
-cmake -DCMAKE_CXX_COMPILER=clang-omp++ ../src
-make
+    mkdir build
+    cd build
+    cmake -DCMAKE_CXX_COMPILER=clang-omp++ ../src
+    make
+
 
 # Usage
 
