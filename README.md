@@ -31,3 +31,22 @@ where:
     - <simulationTime> is the limit of simulation time specified by the user
     - <KaFlow> is the KaFlow executable, give the path to it
 
+An example:
+```
+./KaStat_sq ../statistical_test/test01 ../models/egfr.ka "1/E-R" "2/R-R" positive ../KaSim 100 ../KaFlow
+```
+
+# Output
+
+[given statistical test] [estimated prob] [# of trajectories holding the given type of influence] [# of total trajectories]
+e.g.
+BEST 0.01 0.99 1 1: estimate = 0.995633, successes = 227, samples = 227
+
+If successes != 0, output:
+"The story with this file name - " + maxratiofilename + " - contributes most to this influence with a ratio as " + maxratio + "%."
+
+Otherwise, output:
+"The statistical analysis indicates that there is no " + influType + " influence from " + string(argv[3]) [RuleA] + " to " + string(argv[4]) [RuleB].
+
+
+
