@@ -1,6 +1,6 @@
 # KaStat
 
-Statisitical analysis for Kappa models. Currently, it carries out the following analyses.
+Statistical analysis for Kappa models. Currently, it carries out the following analyses.
 
 1. Estimate the probability of a certain type of influence between two given Kappa rules.
 
