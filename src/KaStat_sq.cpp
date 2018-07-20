@@ -699,7 +699,7 @@ int main (int argc, char **argv) {
     vector<int> influret;
     vector<vector<string>> allstories;
     int maxind;
-    int maxratio;
+    float maxratio;
     int maxval = 0;
     string maxratiofilename;
 
@@ -887,7 +887,8 @@ int main (int argc, char **argv) {
                 maxval = std::stoi(allstories[storynumi].back());
             }
         }
-        maxratio = (maxval / satnum) * 100;
+
+        maxratio = ((float)maxval / (float)satnum) * 100;
         allstories[maxind].pop_back();
         maxratiofilename = allstories[maxind].back();
         cout << "The story with this file name - " << maxratiofilename << " - contributes most to this influence with a ratio as " << maxratio << "%." << endl;
