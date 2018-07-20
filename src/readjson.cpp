@@ -69,17 +69,17 @@ std::vector<int> readjson (string const & rulenameA, string const & rulenameB, s
 
     if (fluxtable.is_open())
     {
-    
+        getline (fluxtable, line);
         while (getline (fluxtable, line))
         {
-
-            if (line.substr(0, 1) == "r")
+            if (line.substr(0, 1) == "r" || line.substr(0, 1) == " ")
             {
-                rulesline = line;
+                rulesline += line;
+            }
+            else{
                 break;
             }
         }
-    
         string rulesnames = rulesline.substr(7, rulesline.length()-9);
     
         size_t prev = 0, pos = 0;
@@ -132,7 +132,7 @@ std::vector<int> readjson (string const & rulenameA, string const & rulenameB, s
                 {
                     //ruleAocc = linenum;
                     ruleAocc += 1;
-                    accImpact += std::stof(impactset[ruleBind]);
+                    accImpact += std::stof(impactset[ruleBind+1]);
                     fluxfile << accImpact << '\n';
                     /*
                     if (accImpact < 0){
