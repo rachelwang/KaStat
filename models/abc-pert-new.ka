@@ -11,7 +11,7 @@
 
 'ab.c' A(x[_],c[.]),C(x1{u}[.]) ->A(x[_],c[2]),C(x1{u}[2])
        @ 'on_rate' //AB binds C
-'mod x1' C(x1{u}[1]),A(c[1]) ->C(x1[.]{p}),A(c[.]) @ 'mod_rate' //AB modifies x1
+'mod x1' C(x1{u}[1]),A(c[1]) ->C(x1[.]{p}),A(c[.]) @ 'mod_rate' //AC modifies x1
 'a.c' A(x[.],c[.]),C(x1{p}[.],x2[.]{u}) ->
       A(x[.],c[1]),C(x1{p}[.],x2[1]{u}) @ 'on_rate' //A binds C on x2
 'mod x2' A(x[.],c[1]),C(x1{p},x2{u}[1]) ->
