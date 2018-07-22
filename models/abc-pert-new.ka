@@ -11,11 +11,11 @@
 
 'ab.c' A(x[_],c[.]),C(x1{u}[.]) ->A(x[_],c[2]),C(x1{u}[2])
        @ 'on_rate' //AB binds C
-'mod x1' C(x1{u}[1]),A(c[1]) ->C(x1[.]{p}),A(c[.]) @ 'mod_rate' //AC modifies x1
+'mod x1' C(x1{u}[1]),A(c[1]) ->C(x1[.]{p}),A(c[.]) @ 'mod_rate' //AC modifies x1, and AC dissociation
 'a.c' A(x[.],c[.]),C(x1{p}[.],x2[.]{u}) ->
       A(x[.],c[1]),C(x1{p}[.],x2[1]{u}) @ 'on_rate' //A binds C on x2
 'mod x2' A(x[.],c[1]),C(x1{p},x2{u}[1]) ->
-         A(x[.],c[.]),C(x1{p},x2{p}[.]) @ 'mod_rate' //A modifies x2
+         A(x[.],c[.]),C(x1{p},x2{p}[.]) @ 'mod_rate' //AC modifies x2, and AC dissociation
 
 /* Variables */
 %var: 'on_rate' 1.0E-4 // per molecule per second
