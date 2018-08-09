@@ -10,10 +10,10 @@
 'a..b' A(x[1/.]),B(x[1/.]) @ 'off_rate' //AB dissociation
 
 'ab.c' A(x[_],c[.]),C(x1{u}[.]) ->A(x[_],c[2]),C(x1{u}[2])
-       @ 'on_rate' //AB binds C
-'mod x1' C(x1{u}[1]),A(c[1]) ->C(x1[.]{p}),A(c[.]) @ 'mod_rate' //AC modifies x1, and AC dissociation
+       @ 'on_rate' //AB binds unphosphorilated C
+'mod x1' C(x1{u}[1]),A(c[1]) ->C(x1[.]{p}),A(c[.]) @ 'mod_rate' //ABC modifies x1, and AC dissociation
 'a.c' A(x[.],c[.]),C(x1{p}[.],x2[.]{u}) ->
-      A(x[.],c[1]),C(x1{p}[.],x2[1]{u}) @ 'on_rate' //A binds C on x2
+      A(x[.],c[1]),C(x1{p}[.],x2[1]{u}) @ 'on_rate' //A binds x1_phos C on x2
 'mod x2' A(x[.],c[1]),C(x1{p},x2{u}[1]) ->
          A(x[.],c[.]),C(x1{p},x2{p}[.]) @ 'mod_rate' //AC modifies x2, and AC dissociation
 
